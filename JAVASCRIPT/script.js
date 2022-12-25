@@ -129,27 +129,52 @@
 
 /* DIFFERENNCE BETWEEN  === AND == THE THREE EQUAL SIGN === CHECKS FOR BOTH THE  DATA TYPE AND EQUALITY WHILEST THE DOUBLE EQUAL SIGN CHECK ONLY FOR EQUALITY */
 
-function loveCalc() {
-  let yourName = prompt("what is your name?");
-  let theirName = prompt("what is their name?");
+// LEAP YEAR STARTS HERE
 
-  let MatchScore = Math.random() * 100;
-  MatchScore = Math.floor(MatchScore) + 1;
+// LEAP YEAR ENDS HERE
+let year = prompt("what year is it?");
 
-  if (MatchScore === 100) {
-    alert(
-      `Hello ${yourName}, your Match Score is ${MatchScore}% you and ${theirName} are ment for each other`
-    );
-  }
-  if (MatchScore > 30 && MatchScore <= 70) {
-    alert(`Hello ${yourName}, Your Match Score is ${MatchScore}%`);
-  }
-  if (MatchScore <= 30) {
-    alert(
-      `Hello ${yourName}, your Match Score is ${MatchScore}% You both are like oil and water`
-    );
+function isLeapYear(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        return "leap year";
+      }
+      return "Not leap year.";
+    }
+    return "leap year.";
   } else {
-    alert(`Hello ${yourName}, your Match Score is ${MatchScore}% `);
+    return "Not leap year";
   }
 }
-loveCalc();
+
+console.log(isLeapYear(year));
+
+// LOVE CALCULATOR STARTS HERE
+
+// function loveCalc() {
+//   let yourName = prompt("what is your name?");
+//   let theirName = prompt("what is their name?");
+
+//   let MatchScore = Math.random() * 100;
+//   MatchScore = Math.floor(MatchScore) + 1;
+
+//   if (MatchScore === 100) {
+//     alert(
+//       `Hello ${yourName}, your Match Score is ${MatchScore}% you and ${theirName} are ment for each other`
+//     );
+//   }
+//   if (MatchScore > 30 && MatchScore <= 70) {
+//     alert(`Hello ${yourName}, Your Match Score is ${MatchScore}%`);
+//   }
+//   if (MatchScore <= 30) {
+//     alert(
+//       `Hello ${yourName}, your Match Score is ${MatchScore}% You both are like oil and water`
+//     );
+//   } else {
+//     alert(`Hello ${yourName}, your Match Score is ${MatchScore}% `);
+//   }
+// }
+// loveCalc();
+
+// LOVE CALCULATOR ENDS HERE
